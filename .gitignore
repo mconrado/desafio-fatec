@@ -1,0 +1,8 @@
+.idea
+.fatec
+.env
+*.sqlite3
+*pyc
+__pycache__
+.ipynb_checkpoints/
+staticfiles
