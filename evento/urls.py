@@ -19,6 +19,6 @@ from django.urls import path
 import evento.core.views
 
 urlpatterns = [
-path('', evento.core.views.home),
+    path('', evento.core.views.home),
     path('admin/', admin.site.urls),
 ]
