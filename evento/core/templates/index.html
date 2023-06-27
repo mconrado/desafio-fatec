@@ -6,13 +6,15 @@
 </head>
 <body>
     <h1>Bem vindo Aquele evento da Fatec</h1>
-    <form name="envio">
-        <label for="aluno">Aluno: </label><input type="text" id="aluno" name="aluno"><br/>
-        <label for="professor">Professor: </label>
-        <select name="professor" id="professor">
-            <option value="greg">Gregório</option>
-            <option value="orlando">Orlando</option>
-        </select>
+    <form action="." novalidate method="post">
+        {% csrf_token %}
+        <label for="{{ form.aluno.id_for_label }}">{{ form.aluno.label }}</label>
+        {{ form.aluno.errors }}
+        {{ form.aluno }}<br >
+
+        <label for="{{ form.professor.id_for_label}}">{{ form.professor.label }} </label>
+        {{ form.professor.errors }}
+        {{ form.professor }}
         <br/>
         <input type="submit" value="Confirmar">
     </form>
